@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Lucu Cacaa 🩷✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Galeri Lucu Cacaa 🩷✨</h1>
+    <p>Hai! Ini kumpulan foto-foto lucu & moment spesialku 🫶</p>
+  </header>
+
+  <section class="gallery">
+    <img src="images/foto1.jpg" alt="Foto lucu 1">
+    <img src="images/foto2.jpg" alt="Foto lucu 2">
+    <img src="images/foto3.jpg" alt="Foto lucu 3">
+  </section>
+
+  <section class="about">
+    <p>Semoga kalian juga ikut tersenyum liat foto-foto ini! 🌸✨</p>
+    <button onclick="window.location.href='https://instagram.com/usernamekamu';">
+      🌷 Follow IG Aku
+    </button>
+  </section>
+
+  <footer>
+    <p>🩷 Dibuat dengan cinta - 2025 🩷</p>
+  </footer>
+
+  <script>
+    // Confetti sederhana
+    for (let i = 0; i < 50; i++) {
+      let confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>

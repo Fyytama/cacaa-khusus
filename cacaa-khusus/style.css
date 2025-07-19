@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #ffe4ec, #fce1ff);
+  color: #444;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+}
+
+.animated-text {
+  animation: popUp 1s ease-out;
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  border: 3px solid #f8c7ff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.about {
+  margin: 20px;
+}
+
+button {
+  background-color: #ffb3d9;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff80bf;
+}
+
+footer {
+  background-color: #f8c7ff;
+  color: #444;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  top: -10px;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
