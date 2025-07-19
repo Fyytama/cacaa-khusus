@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mau Bilang Sesuatu Nih...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #fef0f0;
+      color: #222;
+      text-align: center;
+      padding: 30px;
+      overflow: hidden;
+    }
+    .page {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 0.5s ease;
+    }
+    .active { display: flex; }
+    h1 { font-size: 28px; margin-bottom: 10px; }
+    p { font-size: 20px; max-width: 90%; }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      font-size: 18px;
+      background: #ff6b81;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff9ea3;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #ff4757;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* animasi love nyeleneh */
+    .love-bounce {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 40px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="love-bounce">❤️</div>
+
+  <div class="page active" id="page1">
+    <h1>Haiii kamu yang sering nyangkut di pikiranku~</h1>
+    <p>Aku ada rahasia penting banget... tapi janji jangan ketawa ya 😳</p>
+    <button onclick="nextPage(2)">Oke, lanjut!</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>Aku tuh tiap hari mikir kamu mulu...</h1>
+    <p>...sampe Google Maps aja nggak bisa nemuin jalan keluar dari pikiran ini 🗺️</p>
+    <button onclick="nextPage(3)">Waduhhh 😂</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>Setiap kamu senyum...</h1>
+    <p>Kayak charger 200 watt... langsung *ngisi energi hidup aku full* 🔋✨</p>
+    <button onclick="nextPage(4)">Zzztttt 💘</button>
+  </div>
+
+  <div class="page" id="page4">
+    <h1>Dan setiap kamu ngetik "hehe"</h1>
+    <p>Hati aku langsung: 💥💓💥💓💥 (kayak disetrum tapi happy)</p>
+    <button onclick="nextPage(5)">Ampun deh kamu~</button>
+  </div>
+
+  <div class="page" id="page5">
+    <h1>Jadi intinya...</h1>
+    <p>Aku suka kamu! 🥺❤️ Mau nggak jadi tempat favorit aku buat pulang?</p>
+    <button onclick="alert('YEAY! Kamu bikin aku senyum kayak orang bego 🤭❤️')">Aku Mauu 😚</button>
+  </div>
+
+  <script>
+    function nextPage(n) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + n).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ada yang Mau Aku Bilang...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #222;
+      text-align: center;
+      padding: 30px;
+      overflow: hidden;
+    }
+    .page {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 0.6s ease;
+    }
+    .active { display: flex; }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      max-width: 90%;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #ff1493;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page active" id="page1">
+    <h1>Hey kamu...</h1>
+    <p>Ya kamu, yang baru aku chat semalem 😅</p>
+    <button onclick="nextPage(2)">Kenapa emangnya?</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>Baru liat foto kamu sekali...</h1>
+    <p>...tapi kayaknya wajah kamu udah nyewa kos-kosan di kepala aku 😳</p>
+    <button onclick="nextPage(3)">Ehhh beneran nih?</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>Tiap buka HP, yang kebayang mukamu</h1>
+    <p>Padahal baru kenal, baru chat... kok bisa secepet itu ya 😅</p>
+    <button onclick="nextPage(4)">Kamu kena virus cinta?</button>
+  </div>
+
+  <div class="page" id="page4">
+    <h1>Mungkin ini konyol...</h1>
+    <p>Tapi aku suka gaya kamu. Suka caramu ngetik. Suka vibe kamu 🤭</p>
+    <button onclick="nextPage(5)">Kamu lucu tau gak?</button>
+  </div>
+
+  <div class="page" id="page5">
+    <h1>Jadi boleh gak aku jujur?</h1>
+    <p>Aku suka kamu. Iya, kamu yang baru kukenal 1 hari itu 😌💖</p>
+    <button onclick="alert('Kalau kamu mau kasih kesempatan, aku janji bakal serius. Tapi tetep lucu. 🤭❤️')">Aku juga suka kamu 😳</button>
+  </div>
+
+  <script>
+    function nextPage(n) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + n).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
