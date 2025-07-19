@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Quotes Bijak, Tapi Bikin Ngakak 😎</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #fffaf0;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    .page {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 0.4s ease;
+    }
+    .active { display: flex; }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #ffa07a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background: #ff6347;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page active" id="page1">
+    <h1>🧠 Motivasi Hari Ini</h1>
+    <p>Kalau hidupmu berat... ingat, kamu gak sendirian. Timbangan juga berat kalau dinaikin berdua 😌</p>
+    <button onclick="nextPage(2)">Next 🤓</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>💪 Semangat dong!</h1>
+    <p>Jangan nyerah! Bahkan kucing aja kalau jatuh 7 kali, masih bisa jadi meme lucu di TikTok 😼</p>
+    <button onclick="nextPage(3)">Lanjut 🐾</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>❤️ Gombal dikit...</h1>
+    <p>Kamu tau gak bedanya kamu sama Indomaret?  
+    Indomaret buka 24 jam, kalau kamu... kebuka terus di pikiranku 😗</p>
+    <button onclick="nextPage(4)">Astaga 😳</button>
+  </div>
+
+  <div class="page" id="page4">
+    <h1>🌈 Jangan minder</h1>
+    <p>Kalau ada yang bilang kamu gak spesial... inget, mie instan aja murah tapi bikin bahagia 🍜</p>
+    <button onclick="nextPage(5)">Lanjut lagi dong!</button>
+  </div>
+
+  <div class="page" id="page5">
+    <h1>🫶 Gombalan soft</h1>
+    <p>Kamu tuh kayak notifikasi Shopee...  
+    gak penting, tapi bikin aku senyum 😅</p>
+    <button onclick="nextPage(6)">Masih lanjut?</button>
+  </div>
+
+  <div class="page" id="page6">
+    <h1>🧋 Motivasi final</h1>
+    <p>Jangan takut gagal, yang penting berani nyoba...  
+    Kayak aku yang berani sok-sokan bijak gini padahal ya... yaudah 🤪</p>
+    <button onclick="alert('Udah cukup bijaknya, sekarang senyum ya 😄✨')">Senyum dong 😁</button>
+  </div>
+
+  <script>
+    function nextPage(n) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + n).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
